@@ -21,7 +21,12 @@ const mailList = [
 const userInput = prompt("Inserisci la tua e-mail");
 
 // dichiarare un ciclo for per ogni elemento presente nell'array e confrontare il valore dell'elemento con la mail inserita dall'utente
-for (i = 0; i < mailList.length; i++) {
-    if (mailList[i] === userInput) console.log("La mail è presente!")   
-        if (i === (mailList.length -1) && (mailList[i] !== userInput)) console.log("La mail non è presente!")
-}
+// for (i = 0; i < mailList.length; i++) {
+//     if (mailList[i] === userInput) console.log("La mail è presente!")   
+//         if (i === (mailList.length -1) && (mailList[i] !== userInput)) console.log("La mail non è presente!")
+// }
+
+// nuova soluzione
+
+if (mailList.indexOf(userInput) != -1) console.log("La mail è presente!");
+else console.log("La mail non è presente!");
